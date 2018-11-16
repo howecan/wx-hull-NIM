@@ -1,0 +1,26 @@
+<!--pages/movie-more/movie-more.wxml-->
+<import src="/pages/movie-list/movie-list.wxml" />
+<view class="container">
+<view class="session-tab">
+<text class="tab-name {{shownewslist ? 'tab-select' : 'normal'}}" data-tabid="newslist" bindtap="bindselect">新闻</text>
+<text class="tab-name {{showbanner ? 'tab-select' : 'normal'}}" data-tabid="banner" bindtap="bindselect">图集</text>
+</view>
+<view class="session-movie">
+<view class="session-content">
+<block wx:if="{{shownewslist}}">
+  <scroll-view scroll-y class="scroll-movie"  style="height:{{winHeight}}px" bindscrolltolower="handlelower">
+    <block wx:for="{{newslist.movies}}" wx:key="{{newslist.movies}}">
+    <template is="movie-list" data="{{...item}}"></template>
+    </block>
+</scroll-view>
+</block>
+<block wx:if="{{showbanner}}">
+  <scroll-view scroll-y  class="scroll-movie"  style="height:{{winHeight}}px" bindscrolltolower="handlelower">
+    <block wx:for="{{banner.movies}}" wx:key="{{banner.movies}}">
+    <template is="movie-list" data="{{...item}}"></template>
+    </block>    
+  </scroll-view>
+</block>
+</view>
+</view>
+</view>

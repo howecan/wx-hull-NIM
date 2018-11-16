@@ -1,0 +1,29 @@
+<view class='background-wrapper'>
+<form bindsubmit='doLogin'>
+  <view class='login-wrapper'>
+    <view class='login-title'>
+      <image src='{{avatorUrl}}'></image>
+      <text>{{ nickname }}</text>
+    </view>
+    
+      <view class='login-item nodisplay'>
+        <text class='login-item-text'>账号</text>
+        <input bindinput='inputHandler' data-type='account' class='login-item-input' placeholder='请输入' type='text' confirm-type='next'></input>
+      </view>
+
+      <view class='login-item'>
+        <input bindinput='inputHandler' data-type='password' type='password' class='login-item-input' placeholder='请输入密码' placeholder-style="color:rgb(173,185,193);font-size:18px;" confirm-type='done'></input>
+      </view>
+
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="doLogin" disabled='{{!canclick}}' class='login-submit-btn'>登   录</button>
+<button  wx:if="{{!canIUse}}" open-type="openSetting" bindopensetting="handler" class='login-submit-btn'>授权设置</button>
+      <view class='to-register'>
+      <text bindtap='gotohome' class='login-to-register'>返回首页</text>
+      <!-- <text class='login-to-unregister'>没有账号？</text> -->
+      <text bindtap='registerTap' class='login-to-register'>注册账号</text>
+      </view>
+  
+    
+  </view>
+   </form>
+</view>

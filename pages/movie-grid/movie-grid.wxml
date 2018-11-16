@@ -1,0 +1,10 @@
+<!--pages/movie-grid/move-grid.wxml-->
+<template name="movie-grid">
+<view class="circle-wrapper" bindtap="bindtodetail" data-id="{{id}}">
+  <view class="circle-bg">
+     <image class="poster" src="{{litpic}}" mode="aspectFill"></image>
+     </view>
+       <text class="name">{{title}}</text>
+
+ </view>
+</template>

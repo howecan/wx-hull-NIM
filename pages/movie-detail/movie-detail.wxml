@@ -1,0 +1,42 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+
+<import src="../../wxParse/wxParse.wxml" />
+<import src="/pages/movie-list/movie-list.wxml" />
+<view class="container">
+
+<view class="session-wrap">
+    <text class="title">{{title}}</text>
+    <view class="movie-summary">
+      <text class="writer">{{writer}}</text>
+      <text class="pubdate">{{pubdate}}</text>
+      <text class="typename" bindtap="bindtotype" data-id="{{typeid}}">{{typename}}</text>
+    </view>
+</view>
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      <template is="wxParse" data="{{wxParseData:imglist.nodes}}" />
+    </view>
+
+  
+
+<block wx:if="{{jumpurl}}">
+<view class="btn-area" ><button type="primary" bindtap="bindtodownload" data-id="{{jumpurl}}">点击下载</button>
+<text >若无法打开此文件，请访问官网下载。</text>
+</view>
+</block>
+
+
+  <view class="btn-area mt1"><button open-type="share">看完别走 分享一下</button></view>
+    <view class="session-ad">
+    <official-account></official-account>
+     <image class="myad" src="{{poster}}" data-src="{{poster}}" bindtap="previewImage" mode="aspectFit"></image>
+    </view>
+    <text class="title2">随便看看</text>
+ 
+  <view class="session-content">
+    <block wx:for="{{movies}}" wx:key="{{movies}}">
+      <template is="movie-list" data="{{...item}}"></template>
+    </block>
+  </view>
+<view class="btn-area"><button type="primary" bindtap="bindtohome">回到首页</button></view>
+</view>

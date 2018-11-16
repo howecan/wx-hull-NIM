@@ -1,0 +1,27 @@
+<view class='background-wrapper'>
+  <view class='register-wrapper'>
+  <view class='register-title'>
+      <image src="{{avatarUrl}}" class='register-title-image'></image>
+      <text class='register-title-text'>{{nickname}}</text>
+  </view>
+  <form bindsubmit='registerSubmit'>
+      <view class='register-item'>
+      <text class='register-item-text'>昵称</text>
+      <input bindinput='inputHandler' data-type='nickname' maxlength="10"  class='register-item-input'  placeholder='限10位汉字、字母或数字' value="{{nickname}}"></input>
+    </view>
+
+  <view class='register-item'>
+      <text class='register-item-text'>账号</text>
+      <input bindinput='inputHandler' data-type='account' maxlength="20" class='register-item-input' placeholder='如QQ号、英文名、微信号'></input>
+    </view>
+
+    <view class='register-item'>
+      <text class='register-item-text'>密码</text>
+      <input bindinput='inputHandler' data-type='password' type='password' maxlength="20" class='register-item-input' placeholder='6~20位字母或数字' ></input>
+    </view>
+
+    <button form-type='submit' loading='{{isRegister}}' disabled='{{!canClick}}' class='register-submit-btn'>注  册</button>
+  </form>
+  <text bindtap='registerLoginTap' class='register-to-login'>已有帐号？直接登录</text>
+</view>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/home/home.wxml-->
+<import src="/pages/movie-grid/movie-grid.wxml" />
+<import src="/pages/movie-list/movie-list.wxml" />
+<view class="container">
+  <view class="page-session">
+    <swiper indicator-dots="{{banner.indicatorDots}}" autoplay="{{banner.autoplay}}" interval="{{banner.interval}}" duration="{{banner.duration}}" indicator-color="{{banner.indicatorColor}}">
+      <block wx:for="{{banner.movies}}" wx:key="{{banner.movies}}">
+        <swiper-item>
+      <image src="{{item.litpic}}" class="slide-image"   bindtap="bindtodetail" data-id="{{item.id}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </view>
+<view class="circle-session">
+    <block wx:for="{{circle.movies}}"  wx:key="{{circle.movies}}">
+    <template is="movie-grid" data="{{...item}}"></template>
+    </block>
+</view>
+  <view class="search-movie" >
+       <input type='text' placeholder-class="placeholder"  placeholder="{{placeholder}}" class="search-txt" maxlength='40' confirm-type='search'   bindinput='input1'  bindconfirm='bindToSearch' />
+       <icon type="search" size="16" class="search-icon" bindtap='bindToSearch'></icon>
+  </view>
+  <view class="page-session">
+
+    <view class="session-content">
+
+      <scroll-view scroll-y class="scroll-movie" style="height:{{winHeight}}px" >
+        <block wx:for="{{newslist.movies}}" wx:key="{{newslist.movies}}">
+          <template is="movie-list" data="{{...item}}"></template>
+        </block>
+      </scroll-view>
+
+    </view>
+  </view>
+
+</view>

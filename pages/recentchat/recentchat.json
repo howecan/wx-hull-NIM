@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "校友圈",
+    "usingComponents": {
+      "swipe-delete": "../../components/swipedelete/swipedelete"
+    }
+}

@@ -1,0 +1,36 @@
+/* pages/catalog/catalog.wxss */
+.catalog{
+  width:100%;
+  margin:0 ;
+}
+.catalogli{
+  
+}
+.h2{
+  font-size: 36rpx;
+  font-weight: bold;
+  text-indent: 1em;
+  width:100%;
+  padding:20rpx 0;
+ border-bottom: 1rpx solid #fff;
+ display: block;
+ background-color: #d1d1d1;
+}
+.h3{
+  font-size: 28rpx;
+  text-indent: 2em;
+  width:100%;
+  padding:20rpx 0;
+ border-bottom: 1rpx solid #d1d1d1;
+  display: block;
+}
+.btn-area button{ 
+   margin:50rpx auto;
+   background-color:#990066;
+   color:#fff;
+   width:650rpx;
+  
+}
+.green button{ 
+background-color:#009900;
+}

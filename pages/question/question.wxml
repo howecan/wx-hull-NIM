@@ -1,0 +1,59 @@
+<!--pages/question/question.wxml-->
+<view class="container">
+
+
+<image class="mainpic" src="{{mainpic}}" mode="aspectFill" wx:if="{{!authorized}}"></image>
+
+  <view class="asklist">
+
+
+      <view wx:if="{{!authorized}}" class="descwrap">
+        
+        <text class="note">足球反着买，别墅靠大海。问题答的对，大使也得跪。请你回答以下单选题，考察下你对赫尔大学的了解程度。</text>
+
+        <input type='number' placeholder-class="placeholder" placeholder="请输入手机号作为身份依据" class="search-txt" maxlength='11' confirm-type='done' bindinput='input1' />
+        <view class="btn-area yellow">
+          <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" type="default">点击开始答题</button>
+        </view>
+      </view>
+
+      <view wx:if="{{authorized}}" class="askwrap">
+          <scroll-view scroll-y class="scroll-movie" style="height:{{winHeight}}px" bindscrolltolower="handlelower">
+        <form bindsubmit="formSubmit">
+          <block wx:for="{{askslist}}" wx:key="{{askslist}}">
+            <view class="ask-content" data-id="{{item.id}}">
+
+              <view class="ask-title">
+                <text>{{item.id}}.  {{item.title}}</text>
+              </view>
+              <image class="poster" src="{{item.litpic}}" mode="aspectFill" wx:if="{{item.litpic}}"></image>
+              <radio-group name="q{{item.id}}" class="radio-group">
+                <label class="radio">
+                  <radio value="A" checked="" />{{item.op1}}
+                </label>
+                <label class="radio">
+                  <radio value="B" checked="" />{{item.op2}}
+                </label>
+                <label class="radio">
+                  <radio value="C" checked="" />{{item.op3}}
+                </label>
+                <label class="radio">
+                  <radio value="D" checked="" />{{item.op4}}
+                </label>
+              </radio-group>
+            </view>
+
+          </block>
+          <input type='text' hidden='{{true}}' name="mobile" value="{{mobile}}" />
+          <input type='text' hidden='{{true}}' name="nickname" value="{{nickname}}" />
+          <input type='text' hidden='{{true}}' name="imageUrl" value="{{imageUrl}}" />
+          <view class="btn-area">
+            <button formType="submit">提   交</button>
+          </view>
+        </form>
+        </scroll-view>
+      </view>
+    
+
+  </view>
+</view>

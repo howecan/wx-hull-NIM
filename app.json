@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/recentchat/recentchat",
+    "pages/contact/contact",
+    "pages/index/index",
+    "pages/setting/setting",
+    "pages/movie-more/movie-more",
+    "pages/movie-types/movie-types",
+    "pages/movie-detail/movie-detail",
+    "pages/logs/logs",
+    "pages/movie-grid/movie-grid",
+    "pages/movie-list/movie-list",
+    "pages/catalog/catalog",
+    "pages/question/question",
+    "pages/casts-detail/casts-detail",
+    "pages/rank/rank",
+    "components/emoji/emoji",
+    "components/inputclear/inputclear",
+    "components/inputmodal/inputmodal",
+    "partials/personcard/personcard",
+    "partials/modifyAccountInfo/modifyAccountInfo",
+    "partials/groupList/groupList",
+    "partials/advancedGroupCard/advancedGroupCard",
+    "partials/normalGroupCard/normalGroupCard",
+    "partials/chooseContact/chooseContact",
+    "partials/announcement/announcement",
+    "partials/advancedGroupMember/advancedGroupMember",
+    "partials/advancedGroupMemberCard/advancedGroupMemberCard",
+    "partials/blacklist/blacklist",
+    "partials/strangercard/strangercard",
+    "partials/addFriendOrGroup/addFriendOrGroup",
+    "partials/chating/chating",
+    "partials/messageNotification/messageNotification",
+    "partials/historyFromCloud/historyFromCloud",
+    "partials/forwardContact/forwardContact"
+  ],
+  "window": {
+    "backgroundTextStyle": "#990066",
+    "navigationBarBackgroundColor": "#990066",
+    "navigationBarTitleText": "赫尔101",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#ff5555",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/icon-1.png",
+        "selectedIconPath": "images/icon-1-active.png"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "text": "目录",
+        "iconPath": "images/icon-3.png",
+        "selectedIconPath": "images/icon-3-active.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "校友",
+        "iconPath": "images/contact1.png",
+        "selectedIconPath": "images/contact2.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "我的",
+        "iconPath": "images/setting1.png",
+        "selectedIconPath": "images/setting2.png"
+      }
+    ]
+  }
+}

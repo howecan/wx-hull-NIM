@@ -1,0 +1,33 @@
+<!--pages/rank/rank.wxml-->
+<view class="container">
+
+<view class="rankth">
+<text class="th1">排名</text>
+<text class="th2">昵称</text>
+<text class="th3">得分</text>
+</view>
+<view class="rank" >
+
+<scroll-view scroll-y class="scroll-movie"  style="height:{{winHeight}}px" bindscrolltolower="handlelower" >
+  <block wx:for="{{ranklist}}" wx:for-index="idx" wx:key="{{ranklist}}">
+       <view class="rankli" bindtap="bindtomember" data-id="{{item.id}}">
+       <text class="idx" >{{idx+1}}</text>
+       <image class="avator" src="{{item.litpic}}" ></image>
+       <view class="title">
+         <block wx:if="{{idx < 5}}">
+         <text class="h2" >{{item.title}}</text>
+         </block>
+         <block wx:elif="{{idx > 5}}">
+         <text class="h3" >{{item.title}}</text>
+         </block>
+       
+        <text class="dtime">{{item.jointime}}</text>
+       </view>
+        <text class="scores">{{item.scores}}</text>
+       </view>
+  </block>
+</scroll-view>
+<view class="btn-area"><button bindtap="bindtoquestion">我也来参加101</button></view>
+</view>
+</view>
+

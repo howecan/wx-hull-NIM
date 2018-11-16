@@ -1,0 +1,35 @@
+/* pages/movie-types/movie-types.wxss */
+@import "/pages/movie-list/movie-list.wxss";
+.container {
+justify-content: flex-start;
+}
+.session-tab{
+  width:100%;
+  display:flex;
+  z-index:1;
+  border-bottom-width:1rpx;
+  border-bottom-style:solid;
+  border-bottom-color:#990066;
+  height:80rpx;
+}
+.tab-name{
+  flex:1;
+  font-size:32rpx;
+  font-weight: bold;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.tab-select{
+  color:#990066;
+  
+}
+.normal{
+  color:#9e9e9e;
+}
+.session-content{
+
+  height:100vh;
+  width:100wh;
+}

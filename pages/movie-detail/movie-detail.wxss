@@ -1,0 +1,79 @@
+/* pages/movie-detail/movie-detail.wxss */
+@import "/pages/movie-list/movie-list.wxss";
+@import "../../wxParse/wxParse.wxss";
+.container {
+justify-content: flex-start;
+}
+.session-wrap{
+  width:100%;
+  padding:30rpx;
+  box-sizing: border-box;
+  
+}
+.session-content{
+  width:100%;
+  margin-bottom:50rpx;
+  padding:0rpx 10rpx;
+}
+.movie-summary{
+  width:100%;
+  float: left;
+  line-height: 1.6;
+  padding:20rpx 0rpx ;
+  box-sizing: border-box;
+}
+.title,.title2{
+  width:100%;
+  font-size: 50rpx;
+  color:black;
+  font-weight: 400;
+  line-height: 1.5em;
+  
+  box-sizing: border-box;
+}
+.title2{
+  padding:30rpx;
+font-size: 40rpx;
+margin-top: 20rpx;
+color:#990066;
+}
+.writer,.pubdate,.typename{
+  float: left;
+  width: 25%;
+  font-size: 24rpx;
+  color:#9e9e9e;
+  white-space: nowrap;
+  display:block;
+}
+.typename{
+float: right;
+text-align: right;
+color:cornflowerblue;
+}
+.session-ad{
+  width: 94%;
+  margin:50rpx 3%  ;
+ height: 300rpx;
+ text-align: center;
+}
+.myad,.btn-area{
+   width:100%;
+   margin:20rpx 0 ;
+}
+.btn-area button{ 
+   margin-bottom:50rpx;
+  
+   width:90%;
+  
+}
+.btn-area text{
+  padding:0 30rpx;
+}
+.mt1 button{ 
+  margin:100rpx auto 0 ;
+  color: #fff;
+  background: linear-gradient(to bottom left,#de006a, #3d185b  );
+}
+.movie-desc{
+  height:180rpx;
+}

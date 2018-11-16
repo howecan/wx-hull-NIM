@@ -1,0 +1,18 @@
+<!--pages/movie-list/movie-list.wxml-->
+
+<template name="movie-list">
+  <view class="movie-wrapper" bindtap="bindtodetail" data-id="{{id}}">
+    <view class="movie-content">
+      <image class="poster" src="{{litpic}}" mode="aspectFill"></image>
+      <view class="movie-desc">
+        <view class="movie-desc-name">
+        <text class="name">{{title}}</text>
+        </view>
+        <text class="casts">{{typename}}</text>
+        <text class="directors">{{pubdate}}</text>
+
+      </view>
+      
+    </view>
+  </view>
+</template>
